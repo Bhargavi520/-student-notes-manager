@@ -34,7 +34,7 @@ export default function Profile() {
     const fetchProfile = async () => {
         try {
             const response = await axios.get(
-                "http://localhost:5000/api/profile",
+                `${process.env.REACT_APP_API_URL}/api/profile`,
                 {
                     headers: {
                         Authorization: token
@@ -56,7 +56,7 @@ export default function Profile() {
     const handleSave = async () => {
         try {
             const response = await axios.put(
-                "http://localhost:5000/api/profile",
+                `${process.env.REACT_APP_API_URL}/api/profile`,
                 {
                     name,
                     bio,
