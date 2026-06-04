@@ -55,7 +55,7 @@ function Dashboard() {
 
   const fetchStats = async () => {
     try {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/stats`);
+      const response = await axios.get(`${process.env.VITE_APP_API_URL}/api/stats`);
       setStats(response.data);
     } catch (err) {
       console.log(err);
