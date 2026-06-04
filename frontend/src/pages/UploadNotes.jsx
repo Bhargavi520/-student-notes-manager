@@ -31,7 +31,7 @@ function UploadNotes() {
       formData.append('tags', tags);
       formData.append('file', file);
       // syntax? axios.post(url,data)
-      await axios.post('http://localhost:5000/api/notes', formData, {
+      await axios.post(`${process.env.REACT_APP_API_URL}/api/notes`, formData, {
         headers: { Authorization: token, 'Content-Type': 'multipart/form-data' }
       });
       toast.success('Note uploaded successfully');
