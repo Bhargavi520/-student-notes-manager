@@ -50,7 +50,7 @@ function SearchNotes() {
             try{
 
                 const response = await axios.get(
-                    'http://localhost:5000/api/notes',{headers:{Authorization:token}}
+                    `${process.env.REACT_APP_API_URL}/api/notes`,{headers:{Authorization:token}}
                 );
 
                 setNotes(response.data);
