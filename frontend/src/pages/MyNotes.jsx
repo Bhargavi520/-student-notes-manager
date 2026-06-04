@@ -20,7 +20,7 @@ function MyNotes() {
     const fetchNotes = async () => {
         try {
             const response = await axios.get(
-                "http://localhost:5000/api/notes",
+                `${process.env.REACT_APP_API_URL}/api/notes`,
                 {
                     headers: {
                         Authorization: token,
@@ -43,7 +43,7 @@ function MyNotes() {
     const handleDelete = async (id) => {
         try {
             await axios.delete(
-                `http://localhost:5000/api/notes/${id}`,
+                `${process.env.REACT_APP_API_URL}/api/notes/${id}`,
                 {
                     headers: {
                         Authorization: token,
@@ -74,7 +74,7 @@ function MyNotes() {
     const handleEdit = async (id) => {
         try {
             const response = await axios.put(
-                `http://localhost:5000/api/notes/${id}`,
+                `${process.env.REACT_APP_API_URL}/api/notes/${id}`,
                 {
                     title: editTitle,
                     description: editDescription,
@@ -105,7 +105,7 @@ function MyNotes() {
     const generateSummary = async (id, description) => {
         try {
             const response = await axios.post(
-                "http://localhost:5000/api/ai/summary",
+                `${process.env.REACT_APP_API_URL}/api/ai/summary`,
                 {
                     text: description,
                 }
@@ -114,7 +114,7 @@ function MyNotes() {
 
             // save to db
             await axios.put(
-                `http://localhost:5000/api/notes/${id}/summary`,
+                `${process.env.REACT_APP_API_URL}/api/notes/${id}/summary`,
                 {summary},
                 {
                     headers:{
