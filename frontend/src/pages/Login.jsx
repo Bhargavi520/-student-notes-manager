@@ -12,7 +12,7 @@ function Login() {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`,
+            const response = await axios.post(`${process.env.VITE_APP_API_URL}/api/auth/login`,
                 { email, password });
             localStorage.setItem('token', response.data.token);
             //it stores the user data in the local storage of the browser,
