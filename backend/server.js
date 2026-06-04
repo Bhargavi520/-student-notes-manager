@@ -21,7 +21,7 @@ app.use(cors());
 // it sends req.body as json to the server
 app.use(express.json());
 //connecting to the database
-mongoose.connect(process.env.MONGODB_URI).then(()=>{
+mongoose.connect(process.env.MONGO_URI).then(()=>{
     console.log("connected to the database");
 }).catch((err)=>{
     console.error("Database connection error:", err);
