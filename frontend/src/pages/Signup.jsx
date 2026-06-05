@@ -2,7 +2,7 @@ import {useState} from 'react';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 import {toast} from 'react-toastify';
-const API= import.meta.env.VITE_APP_API_URL;
+const API= import.meta.env.VITE_API_URL;
 
 function Signup(){
     const [name,setName]=useState('');
