@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { Link } from "react-router-dom";
-
+const API= import.meta.env.VITE_API_URL;
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -12,7 +12,7 @@ function Login() {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`${process.env.VITE_APP_API_URL}/api/auth/login`,
+            const response = await axios.post(`${API}/api/auth/login`,
                 { email, password });
             localStorage.setItem('token', response.data.token);
             //it stores the user data in the local storage of the browser,
