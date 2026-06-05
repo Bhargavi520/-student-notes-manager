@@ -114,7 +114,7 @@ function MyNotes() {
 
             // save to db
             await axios.put(
-                `${process.env.VITE_APP_API_URL}/api/notes/${id}/summary`,
+                `${API}/api/notes/${id}/summary`,
                 {summary},
                 {
                     headers:{
