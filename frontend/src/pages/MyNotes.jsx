@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "../components/Navbar";
 import { toast } from "react-toastify";
-
+const API= import.meta.env.VITE_API_URL;
 function MyNotes() {
     const [notes, setNotes] = useState([]);
     const [editingId, setEditingId] = useState(null);
@@ -20,7 +20,7 @@ function MyNotes() {
     const fetchNotes = async () => {
         try {
             const response = await axios.get(
-                `${process.env.VITE_APP_API_URL}/api/notes`,
+                `${API}/api/notes`,
                 {
                     headers: {
                         Authorization: token,
@@ -43,7 +43,7 @@ function MyNotes() {
     const handleDelete = async (id) => {
         try {
             await axios.delete(
-                `${process.env.VITE_APP_API_URL}/api/notes/${id}`,
+                `${API}/api/notes/${id}`,
                 {
                     headers: {
                         Authorization: token,
@@ -74,7 +74,7 @@ function MyNotes() {
     const handleEdit = async (id) => {
         try {
             const response = await axios.put(
-                `${process.env.VITE_APP_API_URL}/api/notes/${id}`,
+                `${API}/api/notes/${id}`,
                 {
                     title: editTitle,
                     description: editDescription,
@@ -105,7 +105,7 @@ function MyNotes() {
     const generateSummary = async (id, description) => {
         try {
             const response = await axios.post(
-                `${process.env.VITE_APP_API_URL}/api/ai/summary`,
+                `${API}/api/ai/summary`,
                 {
                     text: description,
                 }
