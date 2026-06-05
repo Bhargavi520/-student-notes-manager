@@ -9,7 +9,7 @@ import {
 } from 'react-icons/fa';
 import { useState } from 'react';
 import { useEffect } from 'react';
-
+const API= import.meta.env.VITE_API_URL;
 
 function Dashboard() {
   // authentication- identifiying who you are
@@ -55,7 +55,7 @@ function Dashboard() {
 
   const fetchStats = async () => {
     try {
-      const response = await axios.get(`${process.env.VITE_APP_API_URL}/api/stats`);
+      const response = await axios.get(`${API}/api/stats`);
       setStats(response.data);
     } catch (err) {
       console.log(err);
