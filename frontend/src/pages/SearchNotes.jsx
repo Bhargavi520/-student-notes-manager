@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Navbar from '../components/Navbar';
 import {toast} from 'react-toastify';
-const API= import.meta.env.VITE_APP_API_URL;
+const API= import.meta.env.VITE_API_URL;
 
 function SearchNotes() {
 
