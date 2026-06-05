@@ -2,7 +2,7 @@ import {useState} from 'react';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 import {toast} from 'react-toastify';
-
+const API= import.meta.env.VITE_APP_API_URL;
 
 function Signup(){
     const [name,setName]=useState('');
@@ -14,7 +14,7 @@ function Signup(){
     const handleSignup=async(e)=>{
         e.preventDefault();
         try{
-            await axios.post(`${process.env.VITE_APP_API_URL}/api/auth/signup`,
+            await axios.post(`${API}/api/auth/signup`,
                 {name,email,password});
             navigate('/login');
             
