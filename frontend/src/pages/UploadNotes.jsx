@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import Navbar from '../components/Navbar';
 import { toast } from 'react-toastify';
-
+const API= import.meta.env.VITE_APP_API_URL;
 
 
 function UploadNotes() {
@@ -31,7 +31,7 @@ function UploadNotes() {
       formData.append('tags', tags);
       formData.append('file', file);
       // syntax? axios.post(url,data)
-      await axios.post(`${process.env.VITE_APP_API_URL}/api/notes`, formData, {
+      await axios.post(`${API}/api/notes`, formData, {
         headers: { Authorization: token, 'Content-Type': 'multipart/form-data' }
       });
       toast.success('Note uploaded successfully');
