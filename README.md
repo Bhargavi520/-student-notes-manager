@@ -10,8 +10,26 @@ A full-stack **Student Notes Management System** where users can upload, manage,
 ---
 
 ## 📸 Project Preview
+DASHBOARD 
+![image alt](https://github.com/Bhargavi520/-student-notes-manager/blob/15159394e36e8a6714438b40e0f46c60f6b1a95e/01.png)
 
+FEATURES
+![image alt](https://github.com/Bhargavi520/-student-notes-manager/blob/15159394e36e8a6714438b40e0f46c60f6b1a95e/02.png)
 
+UPLOADED NOTES
+
+![image alt](https://github.com/Bhargavi520/-student-notes-manager/blob/15159394e36e8a6714438b40e0f46c60f6b1a95e/03.png)
+
+NOTES
+![image alt](https://github.com/Bhargavi520/-student-notes-manager/blob/15159394e36e8a6714438b40e0f46c60f6b1a95e/04.png)
+
+SEARCH
+
+![image alt](https://github.com/Bhargavi520/-student-notes-manager/blob/15159394e36e8a6714438b40e0f46c60f6b1a95e/05.png)
+
+PROFILE
+
+![image alt](https://github.com/Bhargavi520/-student-notes-manager/blob/15159394e36e8a6714438b40e0f46c60f6b1a95e/06.png)
 
 
 
@@ -77,22 +95,39 @@ A full-stack **Student Notes Management System** where users can upload, manage,
 ## 📁 Project Structure
 
 student-mang/
+
 │
+
 ├── backend/
+
 │ ├── config/
+
 │ │ └── cloudinary.js
+
 │ ├── middleware/
+
 │ ├── models/
+
 │ ├── routes/
+
 │ ├── server.js
+
 │
+
 ├── frontend/
+
 │ ├── src/
+
 │ │ ├── components/
+
 │ │ ├── pages/
+
 │ │ ├── App.jsx
+
 │ │ ├── main.jsx
+
 │
+
 
 ⚙️ Installation Guide
 
@@ -103,17 +138,6 @@ cd student-notes-manager
 cd backend
 npm install
 
-Create .env file:
-
-PORT=5000
-MONGO_URI=your_mongodb_atlas_connection_string
-JWT_SECRET=your_secret_key
-
-OPENAI_API_KEY=your_openai_or_openrouter_key
-
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_API_KEY=your_api_key
-CLOUDINARY_API_SECRET=your_api_secret
 
 Run backend:
 npm start
@@ -125,10 +149,15 @@ npm install
 npm run dev
 
 🌐 Deployment
+
   |__Part______|___Platform_______|
+
   |  Frontend	 |   Vercel         |
+
   |  Backend	 |   Render         |
+  
   |  Database	 |   MongoDB Atlas  |
+  
   |  Storage	 |   Cloudinary     |
   
 📌 Important Notes
@@ -148,6 +177,7 @@ npm run dev
 Bhargavi
 
 GitHub: https://github.com/Bhargavi520
+
 LinkedIn: https://www.linkedin.com/in/bhargavi-dasari-38b293335/
 
 ⭐ Support
